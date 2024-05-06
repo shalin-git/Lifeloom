@@ -46,7 +46,10 @@ class datab(dbs.Model):
     
 @app.route("/" , methods=['GET','POST'])
 def homepage():
-    if(request.form.get != ""):
+    if(request.method == "GET"):    
+        run=datab.query.all()
+        return render_template('index.html',run=run)
+    else:
         Title=request.form.get('Title' , False)
         des=request.form.get('des',False)
         link=request.form.get('link',False)
@@ -56,7 +59,7 @@ def homepage():
         dbs.session.commit()
         run=datab.query.all()
     
-    return render_template('index.html',run=run)
+        return render_template('index.html',run=run)
 
 @app.route('/delete/<int:sno>')
 def delete(sno):
@@ -115,35 +118,35 @@ def guidance():
     querystring1 = {"muscle":search1}
     response = requests.get(url1, headers=headers1, params=querystring1)
     
-    i=0
-    n=[0,1,2,3,4,5]
+    # i=0
+    # n=[0,1,2,3,4,5]
     
     
-    for i in n :
+    # for i in n :
         
         
  
-        Muscle=response.json()[i]['muscle']
-        Muscle_1=str(Muscle)
+    #     Muscle=response.json()[i]['muscle']
+    #     Muscle_1=str(Muscle)
     
-        Name=response.json()[i]['name']
-        Name_1=str(Name)
+    #     Name=response.json()[i]['name']
+    #     Name_1=str(Name)
     
-        Equipment=response.json()[i]['equipment']
-        Equipment_1=str(Equipment)
+    #     Equipment=response.json()[i]['equipment']
+    #     Equipment_1=str(Equipment)
     
-        Difficulty=response.json()[i]['difficulty']
-        Difficulty_1=str(Difficulty)
+    #     Difficulty=response.json()[i]['difficulty']
+    #     Difficulty_1=str(Difficulty)
     
-        Instructions=response.json()[i]['instructions']
-        Instructions_1=str(Instructions)
+    #     Instructions=response.json()[i]['instructions']
+    #     Instructions_1=str(Instructions)
         
-        i+=i
+    #     i+=i
     
-    return render_template('guidance.html', Muscle_1= Muscle_1,Name_1=Name_1,Equipment_1=Equipment_1, Difficulty_1=Difficulty_1,Instructions_1=Instructions_1)
+    return render_template('guidance.html', response=response.json())
     
     
-    # return response.json()  
+    # return response.json()   
 
 if __name__ == "__main__":
     app.run(debug = True)

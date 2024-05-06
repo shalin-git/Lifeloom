@@ -7,7 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    
+  
+    
     <title>Calculator</title>
   </head>
   <body>
@@ -80,36 +82,33 @@
       </form>
     </div>
 
-    <div class="container my-3" >
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">BMR(Basal Metabolic Rate)</th>
-              <th scope="col">To maintain weight(in calories)</th>
-              <th scope="col">Weight loss (calories)</th>
-              <th scope="col">Weight loss (kg)</th>
-              <th scope="col">Weight gain (calories)</th>
-              <th scope="col">Weight gain (kg)</th>
-              
-            </tr>
-          </thead>
-          <tbody>
-          
-            <tr>
-             
-              <td>{{RTR}}</td>
-              <td>{{MW1}}</td>
-              <td>{{WL1_1}}</td>
-              <td>{{WL1_2}}</td>
-              <td>{{WG1_1}}</td>
-              <td>{{WG1_2}}</td>
-
-              
-            </tr>
-          
-          
-          </tbody>
-        </table>
+    <div class="container my-3">
+      <div class="row border">
+        <div class="col-lg-3  p-3 text-white bg-secondary">BMR(Basal Metabolic Rate)</div>
+        <div class="col"><strong>{{RTR}}</strong></div>
+      </div>
+      <div class="row border">
+        <div class="col-lg-3  p-3 text-white bg-secondary">To maintain weight(in calories)</div>
+        <div class="col"><strong>{{MW1}}</strong></div>
+      </div>
+      <div class="row border">
+        <div class="col-lg-3  p-3 text-white bg-secondary">Weight loss (calories)</div>
+        <div class="col"><strong>{{WL1_1}}</strong></div>
+      </div>
+      <div class="row border">
+        <div class="col-lg-3  p-3 text-white bg-secondary">Weight loss (kg)</div>
+        <div class="col"><strong>{{WL1_2}}</strong></div>
+      </div>
+      <div class="row border">
+        <div class="col-lg-3  p-3 text-white bg-secondary">Weight gain (calories)</div>
+        <div class="col"><strong>{{WG1_1}}</strong></div>
+      </div>
+      <div class="row border">
+        <div class="col-lg-3  p-3 text-white bg-secondary">Weight gain (kg)</div>
+        <div class="col"><strong>{{WG1_2}}</strong></div>
+      </div>
+      
+        
          </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -121,5 +120,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
+   
+    </script>
   </body>
 </html>
